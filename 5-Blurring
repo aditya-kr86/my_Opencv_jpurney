@@ -1,0 +1,11 @@
+import cv2
+img = cv2.imread('../aditya.png')
+ksize = 5
+blurred_img = cv2.blur(img, (ksize, ksize))
+gaussian_blurred_img = cv2.GaussianBlur(img, (ksize, ksize), 5)
+median_blurred_img = cv2.medianBlur(img, ksize)
+cv2.imshow("image", img)
+cv2.imshow("blurred image", blurred_img)
+cv2.imshow("gaussian_blurred image", gaussian_blurred_img)
+cv2.imshow("median_blurred image", median_blurred_img)
+cv2.waitKey(0)
